@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/NoblyDk/Nobly.Extensions</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Description>Ensures that all CORS headers remain on responses or else add them back in.
+
+Usefull in ASPNET CORE API's since returning StatusCodes 500 will strip CORS Headers from responses.
+
+This might get fixed in DotNet Core 2.2
+https://github.com/aspnet/Home/issues/2378
+
+Credit goes to
+https://github.com/aspnet/Home/issues/2378#issuecomment-354673591
+</Description>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http\2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
